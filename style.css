@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#primary{
+    display: flex;
+    align-items: center;
+    background: brown;
+    outline: none;
+    border: 1px solid blue;
+    padding: 25px 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+#second{
+    display: none;
+
+    font-size: 25px;
+    color: chocolate;
+    animation: rotating 2s linear infinite;
+    transition: all 0.3s ease;
+}
+
+#primary.active{
+    display: none;
+}
+
+#second.active{
+    display: flex;
+    
+}
+
+@keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
